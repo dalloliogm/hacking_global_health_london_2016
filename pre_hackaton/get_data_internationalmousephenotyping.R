@@ -15,3 +15,11 @@ baseurl = "datasets/mousephenotype/mousephenotypedata.json"
 resp = fromJSON(baseurl)
 resp.df = bind_rows(resp$measurements$measurements) %>% tbl_df
 
+resp.df = resp.df %>% mutate(week= as.numeric(i), weight=as.numeric(v),gene=as.factor(g)) 
+
+resp.df %>%   ggplot(aes(x=week, y=weight, color=gene))  + geom_point() + facet_wrap(~gene) + geom_smooth()
+resp.df %>%  select(animal=a, gene, sex=s, zygosity=z, week, weight) %>% write.table("datasets/mousephenotype/mousephenotypedata.csv", sep=",", row.names=T)
+
+
+
+
