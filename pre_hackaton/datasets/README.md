@@ -1,6 +1,4 @@
+# HBGDki-London
+Healthy Birth, Growth &amp; Development knowledge integration
 
-Origin of playground datasets:
-
-https://github.com/KirstieJane/NSPN_WhitakerVertes_PNAS2016/tree/master/DATA/COMPLETE
-
-
+You will be able to find more details on our website https://www.odsc.com/hack/hacking-global-health-london
